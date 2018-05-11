@@ -23,19 +23,19 @@ export class AppModule {}
 
 ### Template
 ```html
-<ngx-newsticker title="Live News" [events]="eventsData"></ngx-newsticker>
+<ngx-newsticker title="Live News" [events]="eventList"></ngx-newsticker>
 ```
 
 ### Component
 ```typescript
 export class AppComponent implements OnInit {
-  eventsData = new Array<string>();
+  eventList = new Array<string>();
 
   ngOnInit() {
-    this.eventsData.push(`Lorem ipsum dolor sit amet, <s>consectetur</s> adipiscing elit. Phasellus sit amet nibh dolor.`);
-    this.eventsData.push(`<span>${new Date().toLocaleString()}</span> - Sed et ligula non risus ullamcorper rhoncus quis vel ante.`);
-    this.eventsData.push(`<i>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<i>`);
-    this.eventsData.push(`Fusce a odio interdum, <a href="#">I'm Anchor</a> rutrum lorem quis, gravida tellus.`);
+    this.eventList.push(`Lorem ipsum dolor sit amet, <s>consectetur</s> adipiscing elit. Phasellus sit amet nibh dolor.`);
+    this.eventList.push(`<span>${new Date().toLocaleString()}</span> - Sed et ligula non risus ullamcorper rhoncus quis vel ante.`);
+    this.eventList.push(`<i>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<i>`);
+    this.eventList.push(`Fusce a odio interdum, <a href="#">I'm Anchor</a> rutrum lorem quis, gravida tellus.`);
   }
 }
 ```

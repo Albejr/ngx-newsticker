@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  eventsData = new Array<string>();
+  eventList = new Array<string>();
   clockStr: string;
 
   constructor() {
@@ -15,11 +15,11 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
 
-    this.eventsData.push(`Lorem ipsum dolor sit amet, <s>consectetur</s> adipiscing elit. Phasellus sit amet nibh dolor.`);
-    this.eventsData.push(`<span>${new Date().toLocaleString()}</span> - Sed et ligula non risus ullamcorper rhoncus quis vel ante. Mauris ac facilisis ante.`);
-    this.eventsData.push(`Quisque vulputate porta tristique. Nulla dolor nunc, tristique tristique ipsum id, tempus mollis mauris. Etiam cursus fermentum porttitor.`);
-    this.eventsData.push(`<i>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<i>`);
-    this.eventsData.push(`Fusce a odio interdum, <a href="#">I'm Anchor</a> rutrum lorem quis, gravida tellus. Duis congue elementum quam et elementum. Suspendisse id egestas magna. Vivamus eu quam et augue volutpat iaculis at sit amet ante.`);
+    this.eventList.push(`Lorem ipsum dolor sit amet, <s>consectetur</s> adipiscing elit. Phasellus sit amet nibh dolor.`);
+    this.eventList.push(`<span>${new Date().toLocaleString()}</span> - Sed et ligula non risus ullamcorper rhoncus quis vel ante. Mauris ac facilisis ante.`);
+    this.eventList.push(`Quisque vulputate porta tristique. Nulla dolor nunc, tristique tristique ipsum id, tempus mollis mauris. Etiam cursus fermentum porttitor.`);
+    this.eventList.push(`<i>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<i>`);
+    this.eventList.push(`Fusce a odio interdum, <a href="#">I'm Anchor</a> rutrum lorem quis, gravida tellus. Duis congue elementum quam et elementum. Suspendisse id egestas magna. Vivamus eu quam et augue volutpat iaculis at sit amet ante.`);
   }
 
   getTime() {
