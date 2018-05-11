@@ -8,8 +8,8 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./ngx-newsticker-albe.component.css']
 })
 export class NgxNewstickerAlbeComponent implements OnInit {
-  @Input() title: string;
-  @Input() events: Array<string>;
+  @Input() title = '';
+  @Input() events: Array<string> = [];
   // Sets the auto navigate to next event
   @Input() auto = true;
   // Sets the current count visibility

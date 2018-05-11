@@ -2,14 +2,15 @@
 
 ![image](https://user-images.githubusercontent.com/24717256/39906857-a16f2c46-54bb-11e8-88b6-4c35f4d27805.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1
 
 ## Installation
 ```html
 $ npm install ngx-newsticker-albe --save
 ```
 
-## Integration
+## Usage
+### Import the module
 ```typescript
 import { NgxNewstickerAlbeModule } from 'ngx-newsticker-albe';
 
@@ -20,12 +21,12 @@ import { NgxNewstickerAlbeModule } from 'ngx-newsticker-albe';
 export class AppModule {}
 ```
 
-## How to use
+### Template
 ```html
 <ngx-newsticker title="Live News" [events]="eventsData"></ngx-newsticker>
 ```
 
-## Format
+### Component
 ```typescript
 export class AppComponent implements OnInit {
   eventsData = new Array<string>();
@@ -38,3 +39,31 @@ export class AppComponent implements OnInit {
   }
 }
 ```
+
+### Options
+
+| Name          |          | Type          | Default value | Description                           |
+| ------------- | -------- | ------------- | ------------- | ------------------------------------- |
+| [events]      | required | Array<string> | [ ]           | List of messages to be displayed.     |
+| [title]       | optional | string        | null          | Highlighted text.                     |
+| [auto]        | optional | boolean       | true          | Sets the auto navigate to next event. |
+| [showCounter] | optional | boolean       | true          | Sets the current count visibility.    |
+
+## Styling guide
+
+There are several classes that help you to create your custom styles
+`app.component.css`
+```css
+:host ::ng-deep .newsticker>.nt-content>label {
+  color: #D32F2F;
+}
+```
+
+## Demo App
+Follow these instructions to run the demo:
+
+1. Clone the repository to your local machine
+2. From the project folder, run `npm i` to install all required dependencies
+3. Run `ng b ngx-newsticker-albe` to build in **dist** folder.
+4. Run `ng s` to serve the project from a live-updating server.
+5. Go to `localhost:4200` to see the demo site
