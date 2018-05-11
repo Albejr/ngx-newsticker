@@ -1,29 +1,40 @@
-# NgxNewsticker
+# Albe News Ticker <sup>1.0.1</sup>
 
 ![image](https://user-images.githubusercontent.com/24717256/39906857-a16f2c46-54bb-11e8-88b6-4c35f4d27805.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
 
-## Development server
+## Installation
+```html
+$ npm install ngx-newsticker-albe --save
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Integration
+```typescript
+import { NgxNewstickerAlbeModule } from 'ngx-newsticker-albe';
 
-## Code scaffolding
+@NgModule({
+    imports: [ NgxNewstickerAlbeModule ],
+    ...
+})
+export class AppModule {}
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## How to use
+```html
+<ngx-newsticker title="Live News" [events]="eventsData"></ngx-newsticker>
+```
 
-## Build
+## Format
+```typescript
+export class AppComponent implements OnInit {
+  eventsData = new Array<string>();
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  ngOnInit() {
+    this.eventsData.push(`Lorem ipsum dolor sit amet, <s>consectetur</s> adipiscing elit. Phasellus sit amet nibh dolor.`);
+    this.eventsData.push(`<span>${new Date().toLocaleString()}</span> - Sed et ligula non risus ullamcorper rhoncus quis vel ante.`);
+    this.eventsData.push(`<i>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<i>`);
+    this.eventsData.push(`Fusce a odio interdum, <a href="#">I'm Anchor</a> rutrum lorem quis, gravida tellus.`);
+  }
+}
+```
