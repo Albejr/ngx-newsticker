@@ -1,0 +1,18 @@
+<div class="newsticker">
+  <small class="nt-counter" *ngIf="showCounter">{{current}}</small>
+  <div class="nt-title">
+    <h2>{{title}}</h2>
+    <span></span>
+  </div>
+  <div class="nt-content">
+    <label [innerHTML]="item"></label>
+  </div>
+  <div class="nt-navi">
+    <span (click)="navigate('PREV')">
+      <i class="arrow-left"></i>
+    </span>
+    <span (click)="navigate('NEXT')">
+      <i class="arrow-right"></i>
+    </span>
+  </div>
+</div>

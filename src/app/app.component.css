@@ -1,0 +1,65 @@
+:host ::ng-deep .newsticker>.nt-content {
+  left: 155px !important;
+}
+
+:host ::ng-deep .newsticker>.nt-content>label>span {
+  color: #D32F2F;
+  font-weight: bold;
+}
+
+:host ::ng-deep .newsticker>.nt-content>label>a {
+  color: #1565C0;
+  font-weight: bold;
+  text-decoration-style: double;
+}
+
+#banner {
+  background: #747474;
+  width: 600px;
+  height: 135px;
+  position: relative;
+  padding: 15px;
+}
+
+.globe {
+  z-index: 2;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.globe img {
+  height: 120px;
+  width: 120px;
+  border: 6px solid red;
+  /* padding: 1px; */
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px #000000;
+}
+
+.header {
+  background-color: #FFF;
+  padding: 5px 5px 5px 74px;
+  position: absolute;
+  width: 422px;
+  top: 25px;
+  left: 110px;
+  height: 60px;
+  max-height: 75px;
+}
+
+.header h1,
+.header h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer {
+  position: absolute;
+  width: 470px;
+  top: 95px;
+  border-left: solid 75px #1976D2;
+  left: 65px;
+  z-index: 1;
+}

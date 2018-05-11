@@ -1,0 +1,18 @@
+<h1>Angular 6 News Ticker</h1>
+
+<h3>Manual</h3>
+<ngx-newsticker title="Live News" [events]="eventsData" [auto]="false" [showCounter]="false"></ngx-newsticker>
+
+<h3>Auto - with template</h3>
+<div id="banner">
+  <div class="globe">
+    <img src="/assets/earth.gif" />
+  </div>
+  <div class="header">
+    <h1>World News</h1>
+    <h3>- live -</h3>
+  </div>
+  <div class="footer">
+    <ngx-newsticker [title]="clockStr" [events]="eventsData" [showCounter]="false"></ngx-newsticker>
+  </div>
+</div>
