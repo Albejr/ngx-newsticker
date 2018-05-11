@@ -44,10 +44,10 @@ export class AppComponent implements OnInit {
 
 | Name          |          | Type          | Default value | Description                           |
 | ------------- | -------- | ------------- | ------------- | ------------------------------------- |
-| [events]      | required | Array<string> | [ ]           | List of messages to be displayed.     |
-| [title]       | optional | string        | null          | Highlighted text.                     |
-| [auto]        | optional | boolean       | true          | Sets the auto navigate to next event. |
-| [showCounter] | optional | boolean       | true          | Sets the current count visibility.    |
+| [events]      | required | Array<String> | [ ]           | List of messages to be displayed.     |
+| [title]       | optional | String        | ''            | Highlighted text.                     |
+| [auto]        | optional | Boolean       | true          | Sets the auto navigate to next event. |
+| [showCounter] | optional | Boolean       | true          | Sets the current count visibility.    |
 
 ## Styling guide
 
