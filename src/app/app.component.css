@@ -14,8 +14,8 @@
 }
 
 #banner {
-  background: #747474;
-  width: 600px;
+  background: #555;
+  /* width: 600px; */
   height: 135px;
   position: relative;
   padding: 15px;
@@ -31,7 +31,7 @@
 .globe img {
   height: 120px;
   width: 120px;
-  border: 6px solid red;
+  border: 6px solid #D32F2F;
   /* padding: 1px; */
   border-radius: 50%;
   box-shadow: 2px 2px 4px #000000;
@@ -41,7 +41,7 @@
   background-color: #FFF;
   padding: 5px 5px 5px 74px;
   position: absolute;
-  width: 422px;
+  width: 75%;
   top: 25px;
   left: 110px;
   height: 60px;
@@ -53,11 +53,12 @@
   text-transform: uppercase;
   font-weight: bold;
   margin: 0;
+  color: #D32F2F;
 }
 
 .footer {
   position: absolute;
-  width: 470px;
+  width: 75%;
   top: 95px;
   border-left: solid 75px #1976D2;
   left: 65px;
