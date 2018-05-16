@@ -1,4 +1,4 @@
-# Albe News Ticker <sup>1.0.2</sup>
+# Albe News Ticker <sup>1.1.0</sup>
 
 ![image](https://user-images.githubusercontent.com/24717256/39906857-a16f2c46-54bb-11e8-88b6-4c35f4d27805.png)
 
@@ -42,12 +42,14 @@ export class AppComponent implements OnInit {
 
 ### Options
 
-| Name          |          | Type          | Default value | Description                           |
-| ------------- | -------- | ------------- | ------------- | ------------------------------------- |
-| [events]      | required | Array<String> | [ ]           | List of messages to be displayed.     |
-| [title]       | optional | String        | ''            | Highlighted text.                     |
-| [auto]        | optional | Boolean       | true          | Sets the auto navigate to next event. |
-| [showCounter] | optional | Boolean       | true          | Sets the current count visibility.    |
+| Name           |          | Type          | Default value | Description                              |
+| -------------- | -------- | ------------- | ------------- | ---------------------------------------- |
+| [events]       | required | Array<String> | [ ]           | List of messages to be displayed.        |
+| [title]        | optional | String        | ''            | Highlighted text.                        |
+| [auto]         | optional | Boolean       | true          | Sets the auto navigate to next event.    |
+| [showCounter]  | optional | Boolean       | true          | Sets the current count visibility.       |
+| [defaultColor] | optional | String        | '#1976D2'     | Change the default blue color.           |
+| [backColor]    | optional | String        | '#FFFFFF'     | Change the back ground color of content. |
 
 ## Styling guide
 

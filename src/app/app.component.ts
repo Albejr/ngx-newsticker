@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
   eventList = new Array<string>();
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
     const date = new Date();
 
     this.clockStr = [date.getHours(), date.getMinutes(), date.getSeconds()]
-      .map(current => current >= 10 ? current : "0" + current)
-      .join(":");
+      .map(current => current >= 10 ? current : '0' + current)
+      .join(':');
   }
 }

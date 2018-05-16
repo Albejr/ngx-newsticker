@@ -1,0 +1,134 @@
+.newsticker {
+  width: 100%;
+  height: 40px;
+  background-color: #FFF;
+  position: relative;
+  border: solid 1px #1976D2;
+  > {
+    .nt-counter {
+      position: absolute;
+      top: -20px;
+      right: -1px;
+      padding: 5px;
+      background-color: #1976D2;
+      color: #FFF;
+    }
+    .nt-title {
+      width: auto;
+      max-width: 180px;
+      height: 40px;
+      display: inline-block;
+      background-color: #1976D2;
+      position: relative;
+      text-transform: uppercase;
+      > {
+        h2 {
+          display: inline-block;
+          margin: 0;
+          padding: 0 15px;
+          line-height: 40px;
+          font-size: 18px;
+          color: #FFF;
+          height: 40px;
+          box-sizing: border-box;
+          overflow: hidden;
+          font-weight: lighter;
+        }
+        span {
+          width: 0;
+          position: absolute;
+          right: -10px;
+          top: 10px;
+          height: 0;
+          border-style: solid;
+          border-width: 10px 0 10px 10px;
+          border-color: transparent transparent transparent #1976D2;
+        }
+      }
+    }
+    .nt-content {
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 200px;
+      right: 40px;
+      height: 40px;
+      font-size: 16px;
+      >label {
+        position: absolute;
+        height: 40px;
+        width: 100%;
+        line-height: 40px;
+        text-decoration: none;
+        color: #333;
+        overflow: hidden;
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-weight: normal;
+        &:hover {
+          /* color: #1976D2; */
+        }
+      }
+    }
+    .nt-navi {
+      width: 50px;
+      height: 40px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      opacity: 0.1;
+      >span {
+        width: 25px;
+        height: 40px;
+        position: absolute;
+        cursor: pointer;
+        &:first-child {
+          left: 0;
+        }
+        &:last-child {
+          right: 0;
+        }
+        >i {
+          border: solid #1976D2;
+          border-width: 0 2px 2px 0;
+          display: inline-block;
+          padding: 6px;
+          position: absolute;
+          top: 13px;
+          opacity: 0.5;
+          &.arrow-right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+          }
+          &.arrow-left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+            left: 10px;
+          }
+        }
+      }
+    }
+  }
+  &:hover .nt-navi {
+    opacity: 1;
+  }
+  > {
+    .nt-content>label {
+      transition: .25s linear;
+      -moz-transition: .25s linear;
+      -webkit-transition: .25s linear;
+    }
+    .nt-navi {
+      transition: .25s linear;
+      -moz-transition: .25s linear;
+      -webkit-transition: .25s linear;
+      >span {
+        transition: .25s linear;
+        -moz-transition: .25s linear;
+        -webkit-transition: .25s linear;
+      }
+    }
+  }
+}

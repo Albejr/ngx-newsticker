@@ -1,19 +1,41 @@
-import { Component, OnInit, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {
+  Component,
+  OnInit,
+  Input,
+  ElementRef,
+  AfterViewInit,
+  Renderer2,
+  QueryList,
+  ViewChild,
+  ViewChildren
+} from '@angular/core';
 
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'ngx-newsticker',
   templateUrl: './ngx-newsticker-albe.component.html',
-  styleUrls: ['./ngx-newsticker-albe.component.css']
+  styleUrls: ['./ngx-newsticker-albe.component.scss']
 })
-export class NgxNewstickerAlbeComponent implements OnInit {
+export class NgxNewstickerAlbeComponent implements OnInit, AfterViewInit {
+  // Highlighted text.
   @Input() title = '';
+  // List of messages to be displayed.
   @Input() events: Array<string> = [];
-  // Sets the auto navigate to next event
+  // Sets the auto navigate to next event.
   @Input() auto = true;
-  // Sets the current count visibility
+  // Sets the current count visibility.
   @Input() showCounter = true;
+  // Change the default blue color.
+  @Input() defaultColor: string;
+  // Change the back ground color of content.
+  @Input() backColor: string;
+
+  @ViewChild('nt') private ntRef: ElementRef;
+  @ViewChild('ntCounter') private ntCounterRef: ElementRef;
+  @ViewChild('ntTitle') private ntTitleRef: ElementRef;
+  @ViewChild('nDart') private nDart: ElementRef;
+  @ViewChildren('ntNavi') ntNaviRef: QueryList<ElementRef>;
 
   private ACTIONS = {
     'NEXT': 1,
@@ -25,16 +47,41 @@ export class NgxNewstickerAlbeComponent implements OnInit {
   current: string;
   position = -1;
 
-  constructor() {
+  constructor(
+    private elementRef: ElementRef,
+    private renderer: Renderer2) {
     this.autoNext = setInterval(() => this.navigate('NEXT'), 3000);
   }
 
   ngOnInit() {
+
     this.navigate('NEXT');
 
     if (this.auto === false) {
       clearInterval(this.autoNext);
     }
+  }
+
+  ngAfterViewInit(): void {
+    this.defaultColor = this.defaultColor || '#1976D2';
+
+    // this.elementRef.nativeElement.style.backgroundColor = this.backgroundColor;
+    this.renderer.setStyle(this.ntRef.nativeElement, 'background-color', this.backColor || '#FFFFFF');
+    this.renderer.setStyle(this.ntRef.nativeElement, 'border-color', this.defaultColor);
+
+    if (this.ntCounterRef) {
+      this.renderer.setStyle(this.ntCounterRef.nativeElement, 'background-color', this.defaultColor);
+    }
+
+    if (this.ntTitleRef) {
+      this.renderer.setStyle(this.ntTitleRef.nativeElement, 'background-color', this.defaultColor);
+      this.renderer.setStyle(this.nDart.nativeElement, 'border-left-color', this.defaultColor);
+    }
+
+    this.ntNaviRef.forEach(item => {
+      this.renderer.setStyle(item.nativeElement, 'border-color', this.defaultColor);
+    });
+
   }
 
   public navigate(action: string) {
