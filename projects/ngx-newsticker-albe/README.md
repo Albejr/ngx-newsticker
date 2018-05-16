@@ -1,4 +1,4 @@
-# Albe News Ticker <sup>1.1.1</sup>
+# Albe News Ticker <sup>1.1.0</sup>
 
 ![image](https://user-images.githubusercontent.com/24717256/39906857-a16f2c46-54bb-11e8-88b6-4c35f4d27805.png)
 
