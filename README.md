@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
 | -------------- | -------- | ------------- | --------- | --------------------------------------------------------------- |
 | [events]       | required | Array<String> | [ ]       | List of messages to be displayed.                               |
 | [title]        | optional | String        | ''        | Highlighted text.                                               |
-| [interval]     | optional | number        | 3000      | Set the time (milliseconds) interval between the text exchange. |
+| [interval]     | optional | Number        | 3000      | Set the time (milliseconds) interval between the text exchange. |
 | [showCounter]  | optional | Boolean       | true      | Sets the current count visibility.                              |
 | [defaultColor] | optional | String        | '#1976D2' | Change the default blue color.                                  |
 | [backColor]    | optional | String        | '#FFFFFF' | Change the back ground color of content.                        |
