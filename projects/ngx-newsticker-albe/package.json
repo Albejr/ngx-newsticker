@@ -1,6 +1,23 @@
 {
   "name": "ngx-newsticker-albe",
-  "version": "1.1.0",
+  "version": "2.0.0",
+  "description": "News Ticker component to help you accentuate posts and messages.",
+  "keywords": [
+    "angular6",
+    "breakingnews",
+    "marquee",
+    "newsticker"
+  ],
+  "author": "Albertino Júnior (http://albertino.eti.br)",
+  "license": "Unlicense",
+  "homepage": "https://github.com/Albejr/ngx-newsticker#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Albejr/ngx-newsticker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Albejr/ngx-newsticker/issues"
+  },
   "peerDependencies": {
     "@angular/common": "^6.0.0",
     "@angular/core": "^6.0.0"

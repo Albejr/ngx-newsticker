@@ -8,7 +8,8 @@ import {
   Renderer2,
   QueryList,
   ViewChild,
-  ViewChildren
+  ViewChildren,
+  HostListener
 } from '@angular/core';
 
 @Component({
@@ -22,8 +23,8 @@ export class NgxNewstickerAlbeComponent implements OnInit, AfterViewInit {
   @Input() title = '';
   // List of messages to be displayed.
   @Input() events: Array<string> = [];
-  // Sets the auto navigate to next event.
-  @Input() auto = true;
+  // Set the time interval between the text exchange.
+  @Input() interval = 3000;
   // Sets the current count visibility.
   @Input() showCounter = true;
   // Change the default blue color.
@@ -49,17 +50,11 @@ export class NgxNewstickerAlbeComponent implements OnInit, AfterViewInit {
 
   constructor(
     private elementRef: ElementRef,
-    private renderer: Renderer2) {
-    this.autoNext = setInterval(() => this.navigate('NEXT'), 3000);
-  }
+    private renderer: Renderer2) { }
 
   ngOnInit() {
-
-    this.navigate('NEXT');
-
-    if (this.auto === false) {
-      clearInterval(this.autoNext);
-    }
+    this.autoNavigate();
+    this.navigate('NEXT'); // initialize
   }
 
   ngAfterViewInit(): void {
@@ -82,6 +77,24 @@ export class NgxNewstickerAlbeComponent implements OnInit, AfterViewInit {
       this.renderer.setStyle(item.nativeElement, 'border-color', this.defaultColor);
     });
 
+  }
+
+  @HostListener('mouseover')
+  onMouseOver() {
+    clearInterval(this.autoNext);
+  }
+
+  @HostListener('mouseleave')
+  onMouseLeave() {
+    this.autoNavigate();
+  }
+
+  private autoNavigate() {
+    if (this.interval > 0) {
+      this.autoNext = setInterval(() => this.navigate('NEXT'), this.interval);
+    } else {
+      clearInterval(this.autoNext);
+    }
   }
 
   public navigate(action: string) {

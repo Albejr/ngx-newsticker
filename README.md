@@ -1,4 +1,4 @@
-# Albe News Ticker <sup>1.1.0</sup>
+# Albe News Ticker <sup>2.0.0</sup>
 
 ![newsticker](https://user-images.githubusercontent.com/24717256/40119160-4dac26aa-58f2-11e8-96a0-8893b7e383bf.jpg)
 
@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Installation
 ```html
-$ npm install ngx-newsticker-albe --save
+$ npm install ngx-newsticker-albe
 ```
 
 ## Usage
@@ -42,14 +42,14 @@ export class AppComponent implements OnInit {
 
 ### Options
 
-| Name           |          | Type          | Default value | Description                              |
-| -------------- | -------- | ------------- | ------------- | ---------------------------------------- |
-| [events]       | required | Array<String> | [ ]           | List of messages to be displayed.        |
-| [title]        | optional | String        | ''            | Highlighted text.                        |
-| [auto]         | optional | Boolean       | true          | Sets the auto navigate to next event.    |
-| [showCounter]  | optional | Boolean       | true          | Sets the current count visibility.       |
-| [defaultColor] | optional | String        | '#1976D2'     | Change the default blue color.           |
-| [backColor]    | optional | String        | '#FFFFFF'     | Change the back ground color of content. |
+| Name           |          | Type          | Default   | Description                                                     |
+| -------------- | -------- | ------------- | --------- | --------------------------------------------------------------- |
+| [events]       | required | Array<String> | [ ]       | List of messages to be displayed.                               |
+| [title]        | optional | String        | ''        | Highlighted text.                                               |
+| [interval]     | optional | number        | 3000      | Set the time (milliseconds) interval between the text exchange. |
+| [showCounter]  | optional | Boolean       | true      | Sets the current count visibility.                              |
+| [defaultColor] | optional | String        | '#1976D2' | Change the default blue color.                                  |
+| [backColor]    | optional | String        | '#FFFFFF' | Change the back ground color of content.                        |
 
 ## Styling guide
 
