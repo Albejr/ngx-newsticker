@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "News Ticker component to help you accentuate posts and messages.",
   "keywords": [
-    "angular6",
+    "angular",
     "breakingnews",
     "marquee",
     "newsticker"
