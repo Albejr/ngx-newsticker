@@ -1,8 +1,8 @@
-# Albe News Ticker <sup>2.0.0</sup>
+# Albe News Ticker <sup>2.1.0</sup>
 
 ![newsticker](https://user-images.githubusercontent.com/24717256/40119160-4dac26aa-58f2-11e8-96a0-8893b7e383bf.jpg)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4
 
 ## Installation
 ```html
