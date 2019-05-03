@@ -2,7 +2,7 @@
 
 ![newsticker](https://user-images.githubusercontent.com/24717256/40119160-4dac26aa-58f2-11e8-96a0-8893b7e383bf.jpg)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.2
+This project use angular version 7.2.14
 
 ## Installation
 ```html

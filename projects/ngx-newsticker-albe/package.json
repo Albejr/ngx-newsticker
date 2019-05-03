@@ -19,7 +19,7 @@
     "url": "https://github.com/Albejr/ngx-newsticker/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^6.0.0",
-    "@angular/core": "^6.0.0"
+    "@angular/common": "^7.2.14",
+    "@angular/core": "^7.2.14"
   }
 }
