@@ -32,10 +32,10 @@ export class NgxNewstickerAlbeComponent implements OnInit, AfterViewInit {
   // Change the back ground color of content.
   @Input() backColor: string;
 
-  @ViewChild('nt') private ntRef: ElementRef;
-  @ViewChild('ntCounter') private ntCounterRef: ElementRef;
-  @ViewChild('ntTitle') private ntTitleRef: ElementRef;
-  @ViewChild('nDart') private nDart: ElementRef;
+  @ViewChild('nt', {static: true}) private ntRef: ElementRef;
+  @ViewChild('ntCounter', {static: true}) private ntCounterRef: ElementRef;
+  @ViewChild('ntTitle', {static: true}) private ntTitleRef: ElementRef;
+  @ViewChild('nDart', {static: true}) private nDart: ElementRef;
   @ViewChildren('ntNavi') ntNaviRef: QueryList<ElementRef>;
 
   private ACTIONS = {

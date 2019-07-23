@@ -1,6 +1,6 @@
 {
   "name": "ngx-newsticker-albe",
-  "version": "2.1.0",
+  "version": "2.1.3",
   "description": "News Ticker component to help you accentuate posts and messages.",
   "keywords": [
     "angular",
@@ -19,7 +19,7 @@
     "url": "https://github.com/Albejr/ngx-newsticker/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^8.0.0",
-    "@angular/core": "^8.0.0"
+    "@angular/common": "^8.1.2",
+    "@angular/core": "^8.1.2"
   }
 }
