@@ -66,6 +66,9 @@ export class NgxNewstickerAlbeComponent implements OnInit, AfterViewInit {
 
     if (this.ntCounterRef) {
       this.renderer.setStyle(this.ntCounterRef.nativeElement, 'background-color', this.defaultColor);
+      if (!this.showCounter) {
+        this.renderer.setStyle(this.ntCounterRef.nativeElement, 'display', 'none');
+      }
     }
 
     if (this.ntTitleRef) {
