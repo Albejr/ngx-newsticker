@@ -1,7 +1,7 @@
 <div #nt class="newsticker">
   <small #ntCounter class="nt-counter">{{current}}</small>
   <div #ntTitle class="nt-title">
-    <h2>{{title}}</h2>
+    <h2 [innerHTML]="title"></h2>
     <span #nDart></span>
   </div>
   <div class="nt-content">
