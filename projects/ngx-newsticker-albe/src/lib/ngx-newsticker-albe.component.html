@@ -1,11 +1,11 @@
 <div #nt class="newsticker">
   <small #ntCounter class="nt-counter">{{current}}</small>
   <div #ntTitle class="nt-title">
-    <h2 [innerHTML]="title"></h2>
+    <h2 [innerHTML]="title | safeHtml"></h2>
     <span #nDart></span>
   </div>
   <div class="nt-content">
-    <label [innerHTML]="item"></label>
+    <label [innerHTML]="item | safeHtml"></label>
   </div>
   <div class="nt-navi">
     <span (click)="navigate('PREV')">

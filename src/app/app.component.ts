@@ -8,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   eventList = new Array<string>();
   clockStr: string;
+  htmlTitle: string;
 
   constructor() {
     setInterval(() => this.getTime(), 1000);
   }
 
   ngOnInit() {
+    this.htmlTitle = '<a target="_blank" href="https://www.google.com.br/earth" title="earth"><img style="border: 2px solid #D32F2F; border-radius: 50%; width: 20px; margin: -7px 0;" src="https://ian.macky.net/pat/map/globes/earth-cloudy-256-medium.gif"/></a> Live News';
 
     this.eventList.push(`Lorem ipsum dolor sit amet, <s>consectetur</s> adipiscing elit. Phasellus sit amet nibh dolor.`);
     this.eventList.push(`<span>${new Date().toLocaleString()}</span> - Sed et ligula non risus ullamcorper rhoncus quis vel ante. Mauris ac facilisis ante.`);

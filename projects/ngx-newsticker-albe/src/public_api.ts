@@ -4,3 +4,4 @@
 
 export * from './lib/ngx-newsticker-albe.component';
 export * from './lib/ngx-newsticker-albe.module';
+export * from './lib/safe-html.pipe';

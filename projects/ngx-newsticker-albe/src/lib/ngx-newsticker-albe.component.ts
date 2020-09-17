@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import {
   Component,
   OnInit,
@@ -11,6 +10,7 @@ import {
   ViewChildren,
   HostListener
 } from '@angular/core';
+
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -32,10 +32,10 @@ export class NgxNewstickerAlbeComponent implements OnInit, AfterViewInit {
   // Change the back ground color of content.
   @Input() backColor: string;
 
-  @ViewChild('nt', {static: true}) private ntRef: ElementRef;
-  @ViewChild('ntCounter', {static: true}) private ntCounterRef: ElementRef;
-  @ViewChild('ntTitle', {static: true}) private ntTitleRef: ElementRef;
-  @ViewChild('nDart', {static: true}) private nDart: ElementRef;
+  @ViewChild('nt', { static: true }) private ntRef: ElementRef;
+  @ViewChild('ntCounter', { static: true }) private ntCounterRef: ElementRef;
+  @ViewChild('ntTitle', { static: true }) private ntTitleRef: ElementRef;
+  @ViewChild('nDart', { static: true }) private nDart: ElementRef;
   @ViewChildren('ntNavi') ntNaviRef: QueryList<ElementRef>;
 
   private ACTIONS = {
@@ -49,7 +49,6 @@ export class NgxNewstickerAlbeComponent implements OnInit, AfterViewInit {
   position = -1;
 
   constructor(
-    private elementRef: ElementRef,
     private renderer: Renderer2) { }
 
   ngOnInit() {
@@ -60,7 +59,6 @@ export class NgxNewstickerAlbeComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.defaultColor = this.defaultColor || '#1976D2';
 
-    // this.elementRef.nativeElement.style.backgroundColor = this.backgroundColor;
     this.renderer.setStyle(this.ntRef.nativeElement, 'background-color', this.backColor || '#FFFFFF');
     this.renderer.setStyle(this.ntRef.nativeElement, 'border-color', this.defaultColor);
 
