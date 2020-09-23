@@ -14,8 +14,8 @@
 }
 
 #banner {
-  background: #555;
-  /* width: 600px; */
+  background: #CCC;
+  width: 95%;
   height: 135px;
   position: relative;
   padding: 15px;
@@ -39,9 +39,9 @@
 .header {
   background-color: #FFF;
   padding: 5px 5px 5px 74px;
-  position: absolute;
+  position: relative;
   width: 75%;
-  top: 25px;
+  top: 15px;
   left: 110px;
   height: 60px;
   max-height: 75px;
@@ -49,15 +49,18 @@
   h3 {
     text-transform: uppercase;
     font-weight: bold;
-    margin: 0;
     color: #D32F2F;
+    line-height: 1;
+  }
+  h1,
+  h3 {
+    line-height: 0;
   }
 }
 
 .footer {
-  position: absolute;
-  width: 75%;
-  top: 95px;
+  position: relative;
+  width: 80%;
   border-left: solid 75px #1976D2;
   left: 65px;
   z-index: 1;

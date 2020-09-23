@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1em;
+    color: #FFF;
+    margin: 0;
+  
+    background: #C33764;
+    background: -webkit-gradient(linear, left top, left bottom, from(#1D2671), to(#C33764)) fixed;
+    background: gradient(linear, left top, left bottom, from(#1D2671), to(#C33764)) fixed;
+  }
+  
+  @-webkit-keyframes MoveBG {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @-moz-keyframes MoveBG {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes MoveBG {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  

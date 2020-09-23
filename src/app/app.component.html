@@ -5,15 +5,14 @@
 <br/>
 <br/>
 <ngx-newsticker [title]="htmlTitle" [events]="eventList" [interval]="0" [showCounter]="false" [defaultColor]="'#00E676'"></ngx-newsticker>
-<br/>
-<br/>
-<ngx-newsticker title="Live News" [events]="eventList" [interval]="0" [defaultColor]="'#E91E63'" [backColor]="'#E91E63'"></ngx-newsticker>
 
-<h3>Auto - with template</h3>
+<h3>Auto</h3>
+<ngx-newsticker title="Live News" [events]="eventList" [interval]="1500" [defaultColor]="'#E91E63'" [backColor]="'#E91E63'"></ngx-newsticker>
+
+<h3>With template</h3>
 <div id="banner">
   <div class="globe">
-    <!-- <img src="https://ian.macky.net/pat/map/globes/earth-cloudy-256-medium.gif"/> -->
-    <img src="/assets/globe.gif" />
+    <img src="https://ian.macky.net/pat/map/globes/earth-cloudy-256-medium.gif"/>
   </div>
   <div class="header">
     <h1>World News</h1>
