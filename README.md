@@ -26,20 +26,6 @@ export class AppModule {}
 <ngx-newsticker title="Live News" [events]="eventList"></ngx-newsticker>
 ```
 
-### Component
-```typescript
-export class AppComponent implements OnInit {
-  eventList = new Array<string>();
-
-  ngOnInit() {
-    this.eventList.push(`Lorem ipsum dolor sit amet, <s>consectetur</s> adipiscing elit. Phasellus sit amet nibh dolor.`);
-    this.eventList.push(`<span>${new Date().toLocaleString()}</span> - Sed et ligula non risus ullamcorper rhoncus quis vel ante.`);
-    this.eventList.push(`<i>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<i>`);
-    this.eventList.push(`Fusce a odio interdum, <a href="#">I'm Anchor</a> rutrum lorem quis, gravida tellus.`);
-  }
-}
-```
-
 ### Options
 
 | Name           |          | Type          | Default   | Description                                                     |
@@ -58,6 +44,20 @@ There are several classes that help you to create your custom styles
 ```css
 :host ::ng-deep .newsticker>.nt-content>label {
   color: #D32F2F;
+}
+```
+
+### Component
+```typescript
+export class AppComponent implements OnInit {
+  eventList = new Array<string>();
+
+  ngOnInit() {
+    this.eventList.push(`Lorem ipsum dolor sit amet, <s>consectetur</s> adipiscing elit. Phasellus sit amet nibh dolor.`);
+    this.eventList.push(`<span>${new Date().toLocaleString()}</span> - Sed et ligula non risus ullamcorper rhoncus quis vel ante.`);
+    this.eventList.push(`<i>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<i>`);
+    this.eventList.push(`Fusce a odio interdum, <a href="#">I'm Anchor</a> rutrum lorem quis, gravida tellus.`);
+  }
 }
 ```
 
