@@ -32,7 +32,7 @@
     "@angular/language-service": "^10.1.2",
     "@types/node": "~14.10.3",
     "codelyzer": "~6.0.0",
-    "ng-packagr": "^10.1.0",
+    "ng-packagr": "^10.1.1",
     "npm-check-updates": "^9.0.1",
     "protractor": "~7.0.0",
     "ts-node": "~9.0.0",
