@@ -4,9 +4,11 @@
 /dist
 /tmp
 /out-tsc
+.angular
 
 # dependencies
 /node_modules
+/projects/ngx-newsticker-albe/node_modules
 
 # IDEs and editors
 /.idea

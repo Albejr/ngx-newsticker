@@ -128,7 +128,7 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/ngx-newsticker-albe/tsconfig.lib.json",
             "project": "projects/ngx-newsticker-albe/ng-package.json"
@@ -162,5 +162,7 @@
       }
     }
   },
-  "defaultProject": "ngx-newsticker"
+  "cli": {
+    "analytics": false
+  }
 }
