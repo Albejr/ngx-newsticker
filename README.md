@@ -2,7 +2,15 @@
 
 ![newsticker](https://user-images.githubusercontent.com/24717256/40119160-4dac26aa-58f2-11e8-96a0-8893b7e383bf.jpg)
 
-This project use angular version 14.2.1
+Version history:
+| Library | Angular |
+| ------- | ------- |
+| Lastet | 14.2.1 |
+| 2.4.2 | 11.2.14 |
+| 2.2.7 | 10.1.2 |
+| 2.2.5 | 10.1.1 |
+| 2.1.2 | 8.1.2 |
+| 1.1.1 | 6.0.1 |
 
 ## Installation
 ```html
