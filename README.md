@@ -1,4 +1,5 @@
-# Albe News Ticker <sup>2.5.0</sup>
+<h1 align="center"><i>Albe News Ticker <sup>2.5.0</sup></i></h1>
+<p align="center"><i>A horizontal display dedicated to presenting small news. Styles for the template are easily customizable.</i></p>
 
 ![newsticker](https://user-images.githubusercontent.com/24717256/40119160-4dac26aa-58f2-11e8-96a0-8893b7e383bf.jpg)
 
