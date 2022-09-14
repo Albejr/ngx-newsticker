@@ -1,15 +1,18 @@
 <h1>Angular News Ticker</h1>
 
-<h3>Manual</h3>
+<h3>Manual presentation with message counter:</h3>
 <ngx-newsticker title="Live News" [events]="eventList" [interval]="0"></ngx-newsticker>
+
 <br/>
 <br/>
+
+<h3>Custom title and without counter:</h3>
 <ngx-newsticker [title]="htmlTitle" [events]="eventList" [interval]="0" [showCounter]="false" [defaultColor]="'#00E676'"></ngx-newsticker>
 
-<h3>Auto</h3>
+<h3>Auto presentation:</h3>
 <ngx-newsticker title="Live News" [events]="eventList" [interval]="1500" [defaultColor]="'#E91E63'" [backColor]="'#E91E63'"></ngx-newsticker>
 
-<h3>With template</h3>
+<h3>Custom template:</h3>
 <div id="banner">
   <div class="globe">
     <img src="https://ian.macky.net/pat/map/globes/earth-cloudy-256-medium.gif"/>
