@@ -28,15 +28,24 @@ export class NgxNewstickerAlbeComponent implements OnInit, AfterViewInit {
   // Sets the current count visibility.
   @Input() showCounter = true;
   // Change the default blue color.
-  @Input() defaultColor: string;
+  @Input() defaultColor: string = '';
   // Change the back ground color of content.
-  @Input() backColor: string;
+  @Input() backColor: string = '';;
 
-  @ViewChild('nt', { static: true }) private ntRef: ElementRef;
-  @ViewChild('ntCounter', { static: true }) private ntCounterRef: ElementRef;
-  @ViewChild('ntTitle', { static: true }) private ntTitleRef: ElementRef;
-  @ViewChild('nDart', { static: true }) private nDart: ElementRef;
-  @ViewChildren('ntNavi') ntNaviRef: QueryList<ElementRef>;
+  @ViewChild('nt', { static: true })
+  private ntRef!: ElementRef;
+
+  @ViewChild('ntCounter', { static: true })
+  private ntCounterRef!: ElementRef;
+
+  @ViewChild('ntTitle', { static: true })
+  private ntTitleRef!: ElementRef;
+
+  @ViewChild('nDart', { static: true })
+  private nDart!: ElementRef;
+  
+  @ViewChildren('ntNavi')
+  ntNaviRef!: QueryList<ElementRef>;
 
   private ACTIONS = {
     'NEXT': 1,
@@ -44,8 +53,8 @@ export class NgxNewstickerAlbeComponent implements OnInit, AfterViewInit {
   };
 
   autoNext: any;
-  item: string;
-  current: string;
+  item: string = '';
+  current: string = '';
   position = -1;
 
   constructor(
@@ -99,12 +108,16 @@ export class NgxNewstickerAlbeComponent implements OnInit, AfterViewInit {
   }
 
   public navigate(action: string) {
-    if (typeof this.ACTIONS[action] === 'undefined') {
+   const shift: number | undefined = 
+      action == 'NEXT' ? this.ACTIONS.NEXT : 
+      action == 'PREV' ? this.ACTIONS.PREV : 
+      undefined;
+      
+    if (typeof shift === 'undefined') {
       return;
     }
 
-    const shift = this.ACTIONS[action];
-    this.position = this.position + shift;
+    this.position = this.position + shift!;
 
     if (this.events) {
       if (this.position < 0) {

@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   eventList = new Array<string>();
-  clockStr: string;
-  htmlTitle: string;
+  clockStr: string = '';
+  htmlTitle: string = '';
 
   constructor() {
     setInterval(() => this.getTime(), 1000);
