@@ -1,11 +1,12 @@
-# Albe News Ticker <sup>2.7.0</sup>
+# Albe News Ticker <sup>2.8.0</sup>
 
 ![newsticker](https://user-images.githubusercontent.com/24717256/40119160-4dac26aa-58f2-11e8-96a0-8893b7e383bf.jpg)
 
 Version history:
 | Library | Angular |
 | ------- | ------- |
-| Lastet | 16.0.0|
+| Lastet | 17.3.0 |
+| 2.7.0 | 16.0.0 |
 | 2.6.0 | 15.2.6 |
 | 2.5.0 | 14.2.1 |
 | 2.4.2 | 11.2.14 |
